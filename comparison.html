@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="map.js"></script>
+</head>
+<body class="body">
+    <section class="navsec">
+        <nav>
+            <div class="navdiv">
+                <img class="logo" src="images/title.svg" alt="logo">
+            </div>
+            <div class="icondiv-left"> 
+                <img class="icon" src="images/Inventory Icon.svg" alt="inventory icon">
+                <img class="icon" src="images/Sell Icon.svg" alt="sell icon">
+                <img class="icon" src="images/Info Icon.svg" alt="info icon">
+            </div>
+            <div class="icondiv-right">
+                <img class="icon-right" src="images/Saved.svg" alt="saved icon">
+                <img class="icon-right" src="images/Share.svg" alt="share icon">
+            </div>
+        </nav>
+    </section>
+    <section class="bannersec">
+        <div class="bannerdiv">
+            <img class="banner" src="images/banner.png" alt="banner">
+            <div class="searchbardiv">
+                <form action="">
+                    <label for="first_name"></label>
+                    <input type="text" placeholder="Search by any keyword"> <br>
+                    <input type="image" class="submit" src="images/Search Icon.svg" alt="Submit">
+                </form>
+            </div>
+            <div class="categorysearch"> 
+                <div id="BodyType">
+                    <p class="categorysearchtext">Body Type</p>
+                    <img id="categorysearcharrow-1" src="images/Arrows.svg" alt="arrows">
+                </div>
+                <div  id="Make">
+                    <p class="categorysearchtext">Make</p>
+                    <img id="categorysearcharrow-2" src="images/Arrows.svg" alt="arrows">
+                </div>
+                <div  id="SearchButton">
+                    <p class="categorysearchtext-search">Search</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="comparisonsec">
+        <div class="back">
+            <a href="home.html">
+                <img class="Back" src="images/Back.svg" alt="go back">
+            </a>
+        </div>
+        <div id="comparisondisplay">
+            <div id="comparisondisplay-grid">
+                <div id="acura"><img src="/car images/acura.svg" alt="acura"></div>
+                <div id="cadillac"><img src="/car images/cadillac.svg" alt="cadillac"></div>
+                <div class="sidepic" id="a1d"> <img class="ac" src="/car images/a1.svg" alt="a1"></div>
+                <div class="sidepic" id="a2d"> <img class="ac" src="car images/a2.svg" alt="a2"></div>
+                <div class="sidepic" id="a3d"> <img class="ac" src="car images/a3.svg" alt="a3"></div>
+                <div class="sidepic" id="c1d"><img class="ac" src="car images/c1.svg" alt="c1"></div>
+                <div class="sidepic" id="c2d"><img class="ac" src="car images/c2.svg" alt="c2"></div>
+                <div class="sidepic" id="c3d"><img class="ac" src="car images/c3.svg" alt="c3"></div>
+                <div class="actext" id="a-text"> 2017 Acura ILX</div>
+                <div class="actext" id="c-text"> 2015  Cadillac Escalade</div>
+                <div id="a-more"><img class="acmore" src="/images/amore.svg" alt="amore"></div>
+                <div id="c-more"><img class="acmore" src="/images/cmore.svg" alt="cmore"></div>              
+            </div>
+        </div>
+        <div id="stats">
+            <div class="s1">
+                <div class="s1-1">
+                    <span class="statstitle">Overview</span>
+                </div>
+                <div class="colorbar" class="s1-2">
+                    <span class="leftdata">$15,999</span>
+                    <span class="item">Internet Price</span>
+                    <span class="rightdata">$25,445</span>
+                </div>
+                <div class="s1-3">
+                    <span class="leftdata">$29,990</span>
+                    <span class="item">MSRP Price</span>
+                    <span class="rightdata">$41,750</span>
+                </div>
+                <div class="colorbar" class="s1-4">
+                    <span class="leftdata">110,409</span>
+                    <span class="item">Mileage</span>
+                    <span class="rightdata">102,654</span>
+                </div>
+                <div class="s1-5">
+                    <span class="leftdata">2017</span>
+                    <span class="item">Year</span>
+                    <span class="rightdata">2015</span>
+                </div>
+                <div class="colorbar" class="s1-6">
+                    <span class="leftdata">Acura</span>
+                    <span class="item">Make</span>
+                    <span class="rightdata">Cadillac</span>
+                </div>
+                <div class="s1-7">
+                    <span class="leftdata">2- Owners</span>
+                    <span class="item">Car Fax Owner</span>
+                    <span class="rightdata">2- Owners</span>
+                </div>
+                <div class="colorbar" class="s1-8">
+                    <span class="leftdata">None</span>
+                    <span class="item">Accident/Damage</span>
+                    <span class="rightdata">None</span>
+                </div>
+                <div class="s1-9">
+                    <span class="leftdata">Black Pearl</span>
+                    <span class="item">Exterior Color</span>
+                    <span class="rightdata">Jet Black</span>
+                </div>
+                <div class="colorbar" class="s1-10">
+                    <span class="leftdata">Ebony</span>
+                    <span class="item">Interior Color</span>
+                    <span class="rightdata">Black</span>
+                </div>            
+            </div>
+            <div class="s2">
+                <div class="s2-1">
+                    <span class="statstitle">Specifications</span>
+                </div>
+                <div class="colorbar" class="s2-2">
+                    <span class="leftdata">2.4L 4 Cylinders</span>
+                    <span class="item">Engine</span>
+                    <span class="rightdata">2.0L 4 Cylinders</span>
+                </div>
+                <div class="s2-3">
+                    <span class="leftdata">4</span>
+                    <span class="item">Doors</span>
+                    <span class="rightdata">4</span>
+                </div>
+                <div class="colorbar" class="s2-4">
+                    <span class="leftdata">Front Wheel</span>
+                    <span class="item">Drivetrain</span>
+                    <span class="rightdata">Rear Wheel</span>
+                </div>
+                <div class="s2-5">
+                    <span class="leftdata">Automatic</span>
+                    <span class="item">Transmission</span>
+                    <span class="rightdata">Automatic</span>
+                </div>
+                <div class="colorbar" class="s2-6">
+                    <span class="leftdata">4</span>
+                    <span class="item">Cylinder</span>
+                    <span class="rightdata">4</span>
+                </div>
+                <div class="s2-7">
+                    <span class="leftdata">201 hp 6800 rpm</span>
+                    <span class="item">House Power</span>
+                    <span class="rightdata">248 hp 5200 rpm</span>
+                </div>
+                <div class="colorbar" class="s2-8">
+                    <span class="leftdata">Gasoline Fuel</span>
+                    <span class="item">Fuel Type</span>
+                    <span class="rightdata">Gasoline Fuel</span>
+                </div>
+                <div class="s2-9">
+                    <span class="leftdata">City 25  Hwy 35</span>
+                    <span class="item">MPG</span>
+                    <span class="rightdata">City 23 Hwy 34</span>
+                </div>            
+            </div>
+            <div class="s3">
+                <div class="s3-1">
+                    <span class="statstitle">Equipments</span>
+                </div>
+                <div class="colorbar" class="s3-2">
+                    <img class="statsstate-left" src="images/check.svg" alt="">
+                    <span class="item">Leather Seats</span>
+                    <img class="statsstate-right" src="images/cross.svg" alt="">
+                </div>
+                <div class="s3-3">
+                    <img class="statsstate-left" src="images/check.svg" alt="">
+                    <span class="item">Sunroof</span>
+                    <img class="statsstate-right" src="images/cross.svg" alt="">
+                </div>
+                <div class="colorbar" class="s3-4">
+                    <img class="statsstate-left" src="images/cross.svg" alt="">
+                    <span class="item">Navigation</span>
+                    <img class="statsstate-right" src="images/cross.svg" alt="">
+                </div>
+                <div class="s3-5">
+                    <img class="statsstate-left" src="images/cross.svg" alt="">
+                    <span class="item">Third Row</span>
+                    <img class="statsstate-right" src="images/cross.svg" alt="">
+                </div>
+                <div class="colorbar" class="s3-6">
+                    <img class="statsstate-left" src="images/check.svg" alt="">
+                    <span class="item">Stereo</span>
+                    <img class="statsstate-right" src="images/check.svg" alt="">
+                </div>
+                <div class="s3-7">
+                    <img class="statsstate-left" src="images/cross.svg" alt="">
+                    <span class="item">CD Player</span>
+                    <img class="statsstate-right" src="images/check.svg" alt="">
+                </div>
+                <div class="colorbar" class="s3-8">
+                    <img class="statsstate-left" src="images/cross.svg" alt="">
+                    <span class="item">Premium Sound</span>
+                    <img class="statsstate-right" src="images/cross.svg" alt="">
+                </div>
+                <div class="s3-9">
+                    <img class="statsstate-left" src="images/check.svg" alt="">
+                    <span class="item">Power Windows</span>
+                    <img class="statsstate-right" src="images/check.svg" alt="">
+                </div>
+                <div class="colorbar" class="s3-10">
+                    <img class="statsstate-left" src="images/check.svg" alt="">
+                    <span class="item">Power Locks</span>
+                    <img class="statsstate-right" src="images/cross.svg" alt="">
+                </div>
+                <div class="s3-11">
+                    <img class="statsstate-left" src="images/cross.svg" alt="">
+                    <span class="item">Air Conditioning</span>
+                    <img class="statsstate-right" src="images/cross.svg" alt="">
+                </div>
+                <div class="colorbar" class="s3-12">
+                    <img class="statsstate-left" src="images/check.svg" alt="">
+                    <span class="item">ABS</span>
+                    <img class="statsstate-right" src="images/check.svg" alt="">
+                </div>
+                <div class="s3-13">
+                    <img class="statsstate-left" src="images/cross.svg" alt="">
+                    <span class="item">Xenon/Halogen</span>
+                    <img class="statsstate-right" src="images/check.svg" alt="">
+                </div>
+                <div class="colorbar" class="s3-14">
+                    <img class="statsstate-left" src="images/check.svg" alt="">
+                    <span class="item">Lights</span>
+                    <img class="statsstate-right" src="images/check.svg" alt="">
+                </div>
+                <div class="s3-15">
+                    <img class="statsstate-left" src="images/cross.svg" alt="">
+                    <span class="item">Air Bags</span>
+                    <img class="statsstate-right" src="images/cross.svg" alt="">
+                </div>
+                <div class="colorbar" class="s3-16">
+                    <img class="statsstate-left" src="images/check.svg" alt="">
+                    <span class="item">Roof Rack</span>
+                    <img class="statsstate-right" src="images/cross.svg" alt="">
+                </div>
+                <div class="s3-17">
+                    <img class="statsstate-left" src="images/check.svg" alt="">
+                    <span class="item">Cruise Control</span>
+                    <img class="statsstate-right" src="images/check.svg" alt="">
+                </div>            
+            </div>          
+        </div>
+    </section>
+    <section class="bottomsec">
+        <div id="map"></div>
+            <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6tHcHrwuDO00zWnrQVHvTnqyfbizuAvQ&callback=initMap&v=weekly"
+                defer
+            ></script>
+        </div>
+        <img id="bottomlogo" src="images/title.svg" alt="bottomlogo">
+        <div class="bottomcolumn">
+            <div class="bottomcolumnleft">
+                <h5 class="bottomcolumn-heading">Follow Us</h5>
+                <img id="facebook" src="images/facebook.svg" alt="facebook">
+                <img id="twitter" src="images/twitter.svg" alt="twitter">
+            </div>
+            <div class="bottomcolumnright">
+                <h5 class="bottomcolumn-heading">Career</h5>
+                <div id="bottomcolumn-text">
+                    View Available Jobs<br><br>Privacy Policy<br><br>Disclaimer Notice
+                </div>
+            </div>
+        </div>
+        <div id="bottom-info">
+            <div id="address">
+                Venice Blvd<br>Los Angeles, CA 90034<br>(424) 444-6030</div>
+            </div>
+            <div id="timetable">
+                Monday &ensp; &nbsp; 10:00AM - 7:00PM<br>Tuesday &ensp; &nbsp; 10:00AM - 7:00PM<br>Wednesday &nbsp; 10:00AM - 7:00PM<br>Thursday &ensp; &thinsp; 10:00AM - 7:00PM<br>Friday &ensp; &nbsp; &thinsp; 10:00AM - 7:00PM<br>Saturday &ensp; &nbsp; 10:00AM - 7:00PM<br>Sunday &ensp; &nbsp; &thinsp; 10:00AM - 7:00PM
+            </div>
+        </div>
+    </section>
+</body>
+</html>

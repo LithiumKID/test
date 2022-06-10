@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 479px)" href="main-mobile.css">
+    <script src="map.js"></script>
+    <script src="compare.js"></script>
+</head> 
+<body class="body">
+    <section class="navsec">
+        <nav>
+            <div class="navdiv">
+                <img class="logo" src="images/title.svg" alt="logo">
+            </div>
+            <div class="icondiv-left"> 
+                <img class="icon" src="images/Inventory Icon.svg" alt="inventory icon">
+                <img class="icon" src="images/Sell Icon.svg" alt="sell icon">
+                <img class="icon" src="images/Info Icon.svg" alt="info icon">
+            </div>
+            <div class="icondiv-right">
+                <img class="icon-right" src="images/Saved.svg" alt="saved icon">
+                <img class="icon-right" src="images/Share.svg" alt="share icon">
+            </div>
+        </nav>
+    </section>
+    <section class="bannersec">
+        <div class="bannerdiv">
+            <img class="banner" src="images/banner.png" alt="banner">
+            <div class="searchbardiv">
+                <form action="">
+                    <label for="first_name"></label>
+                    <input type="text" placeholder="Search by any keyword"> <br>
+                    <input type="image" class="submit" src="images/Search Icon.svg" alt="Submit">
+                </form>
+            </div>
+            <div class="categorysearch"> 
+                <div id="BodyType">
+                    <p class="categorysearchtext">Body Type</p>
+                    <img id="categorysearcharrow-1" src="images/Arrows.svg" alt="arrows">
+                </div>
+                <div  id="Make">
+                    <p class="categorysearchtext">Make</p>
+                    <img id="categorysearcharrow-2" src="images/Arrows.svg" alt="arrows">
+                </div>
+                <div  id="SearchButton">
+                    <p class="categorysearchtext-search">Search</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="functionmenusec">
+        <div class="functionmenu">
+            <img id="Sort" src="images/sort.svg" alt="sort">
+            <img id="Compare" src="images/Compare.svg" alt="compare" onclick="startComparison()">
+            <img id="Grid" src="images/Grid.svg" alt="grid">
+            <img id="List" src="images/List.svg" alt="list" onclick="selectImages()">
+            <div id="comparison-button">
+                <button class="comparisonbutton comparisonconfirm" onclick="compareElements()">Confirm</button>
+                <button class="comparisonbutton comparisoncancel" onclick="closeComparison()">Cancel</button>
+            </div>
+        <div class="error" id="no-car-selected">
+            Select two more cars to compare
+            <button class="errorbutton" onclick="closeError()">Confirm</button>
+        </div>
+        <div class="error" id="one-car-selected">
+            Select one more car to compare
+            <button class="errorbutton" onclick="closeError()">Confirm</button>
+        </div>
+    </section>
+    <section class="productsec">
+        <div id="productcolumn">
+            <div id="productcolumn-left">
+                <div class="grid grid-top">
+                    <div class="gridtopdiv gridtopdiv-1">
+                        <div class="headingdiv">
+                            <h3 class="headingdivtext">Price Range</h3>
+                        </div>
+                        <div class="scrollbardiv">
+                            <img class="scrollbar" src="images/Price Range.svg" alt="price range">
+                        </div>
+                    </div>
+                    <div class="gridtopdiv gridtopdiv-2">
+                        <div class="headingdiv">
+                            <h3 class="headingdivtext">Mileage Range</h3>
+                        </div>
+                        <div class="scrollbardiv">
+                            <img class="scrollbar" src="images/Mileage Range.svg" alt="price range">
+                        </div>
+                    </div>
+                    <div class="gridtopdiv gridtopdiv-3">
+                        <div class="headingdiv">
+                            <h3 class="headingdivtext">Year</h3>
+                        </div>
+                        <div class="scrollbardiv">
+                            <img class="scrollbar" src="images/Year.svg" alt="price range">
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-bottom">
+                    <div class="gridcolumn gridcolumn-left" id="gdl1">
+                        <div class="category">Exterior Color</div>
+                    </div>
+                    <div class="gridcolumn gridcolumn-left" id="gdl2">
+                        <div class="category">Interior Color</div>
+                    </div>
+                    <div class="gridcolumn gridcolumn-left" id="gdl3">
+                        <div class="category">Drivertrain</div>
+                    </div>
+                    <div class="gridcolumn gridcolumn-left" id="gdl4">
+                        <div class="category">Fuel Type</div>
+                    </div>
+                    <div class="gridcolumn gridcolumn-left" id="gdl5">
+                        <div class="category">Transmission</div>
+                    </div>
+                    <div class="gridcolumn gridcolumn-left" id="gdl6">
+                        <div class="category">Cylinders</div>
+                    </div>
+                    <div class="gridcolumn gridcolumn-left" id="gdl7">
+                        <div class="category">MPG Highway</div>
+                    </div>
+                    <div class="gridcolumn gridcolumn-left" id="gdl8">
+                        <div class="category">MPG City</div>
+                    </div>
+                    <div class="gridcolumn gridcolumn-right" id="gdr1">
+                        <div class="categorydropdown">
+                            <div class="categorydropdowntext">All</div>
+                            <img class="categoryarrows" src="images/Arrows.svg" alt="categoryarrows">
+                        </div>
+                    </div>
+                    <div class="gridcolumn gridcolumn-right" id="gdr2">
+                        <div class="categorydropdown">
+                            <div class="categorydropdowntext">All</div>
+                            <img class="categoryarrows" src="images/Arrows.svg" alt="categoryarrows">
+                        </div>
+                    </div>
+                    <div class="gridcolumn gridcolumn-right" id="gdr3">
+                        <div class="categorydropdown">
+                            <div class="categorydropdowntext">All</div>
+                            <img class="categoryarrows" src="images/Arrows.svg" alt="categoryarrows">
+                        </div>
+                    </div>
+                    <div class="gridcolumn gridcolumn-right" id="gdr4">
+                        <div class="categorydropdown">
+                            <div class="categorydropdowntext">All</div>
+                            <img class="categoryarrows" src="images/Arrows.svg" alt="categoryarrows">
+                        </div>
+                    </div>
+                    <div class="gridcolumn gridcolumn-right" id="gdr5">
+                        <div class="categorydropdown">
+                            <div class="categorydropdowntext">All</div>
+                            <img class="categoryarrows" src="images/Arrows.svg" alt="categoryarrows">
+                        </div>
+                    </div>
+                    <div class="gridcolumn gridcolumn-right" id="gdr6">
+                        <div class="categorydropdown">
+                            <div class="categorydropdowntext">All</div>
+                            <img class="categoryarrows" src="images/Arrows.svg" alt="categoryarrows">
+                        </div>
+                    </div>
+                    <div class="gridcolumn gridcolumn-right" id="gdr7">
+                        <div class="categorydropdown">
+                            <div class="categorydropdowntext">All</div>
+                            <img class="categoryarrows" src="images/Arrows.svg" alt="categoryarrows">
+                        </div>
+                    </div>
+                    <div class="gridcolumn gridcolumn-right" id="gdr8">
+                        <div class="categorydropdown">
+                            <div class="categorydropdowntext">All</div>
+                            <img class="categoryarrows" src="images/Arrows.svg" alt="categoryarrows">
+                        </div>
+                    </div>
+                    <div id="feature">
+                        <div class="category featuretext">Features</div>
+                        <img class="categoryarrows featurearrow" src="images/Arrows.svg" alt="categoryarrows">
+                    </div>
+                </div>
+            </div>
+            <div id="productcolumn-right">
+                <a href="product.html" id="productlink"></a>
+                <div class="productgrid">
+                    <div ><img class="product" id="p1" src="car images/p1.svg" alt="p1" onclick="selectImages(this.id)"></div>
+                    <div ><img class="product" src="car images/p2.svg" alt="p2"></div>
+                    <div ><img class="product" src="car images/p3.svg" alt="p3"></div>
+                    <div ><img class="product" id="p4" src="car images/p4.svg" alt="p4" onclick="selectImages(this.id)"></div>
+                    <div ><img class="product" src="car images/p5.svg" alt="p5"></div>
+                    <div ><img class="product" src="car images/p6.svg" alt="p6"></div>
+                    <div ><img class="product" src="car images/p1.svg" alt="p1"></div>
+                    <div ><img class="product" src="car images/p2.svg" alt="p2"></div>
+                    <div ><img class="product" src="car images/p3.svg" alt="p3"></div>
+                    <div ><img class="product" src="car images/p4.svg" alt="p4"></div>
+                    <div ><img class="product" src="car images/p5.svg" alt="p5"></div>
+                    <div ><img class="product" src="car images/p6.svg" alt="p6"></div>
+                    <div ><img class="product" src="car images/p1.svg" alt="p1"></div>
+                    <div ><img class="product" src="car images/p2.svg" alt="p2"></div>
+                    <div ><img class="product" src="car images/p3.svg" alt="p3"></div>
+                    <div ><img class="product" src="car images/p4.svg" alt="p4"></div>
+                    <div ><img class="product" src="car images/p5.svg" alt="p5"></div>
+                    <div ><img class="product" src="car images/p6.svg" alt="p6"></div>
+                </div>
+            </div>
+        </div>
+        <div id="break">
+            <div class="break viewmore">View More Matches</div>
+            <div class="break currentlyviewing">Currently Viewing 18 of 2,345 Matches</div>
+        </div>
+    </section>
+    <section class="bottomsec">
+        <div id="map"></div>
+            <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6tHcHrwuDO00zWnrQVHvTnqyfbizuAvQ&callback=initMap&v=weekly"
+                defer
+            ></script>
+        </div>
+        <img id="bottomlogo" src="images/title.svg" alt="bottomlogo">
+        <div class="bottomcolumn">
+            <div class="bottomcolumnleft">
+                <h5 class="bottomcolumn-heading">Follow Us</h5>
+                <img id="facebook" src="images/facebook.svg" alt="facebook">
+                <img id="twitter" src="images/twitter.svg" alt="twitter">
+            </div>
+            <div class="bottomcolumnright">
+                <h5 class="bottomcolumn-heading">Career</h5>
+                <div id="bottomcolumn-text">
+                    View Available Jobs<br><br>Privacy Policy<br><br>Disclaimer Notice
+                </div>
+            </div>
+        </div>
+        <div id="bottom-info">
+            <div id="address">
+                Venice Blvd<br>Los Angeles, CA 90034<br>(424) 444-6030</div>
+            </div>
+            <div id="timetable">
+                Monday &ensp; &nbsp; 10:00AM - 7:00PM<br>Tuesday &ensp; &nbsp; 10:00AM - 7:00PM<br>Wednesday &nbsp; 10:00AM - 7:00PM<br>Thursday &ensp; &thinsp; 10:00AM - 7:00PM<br>Friday &ensp; &nbsp; &thinsp; 10:00AM - 7:00PM<br>Saturday &ensp; &nbsp; 10:00AM - 7:00PM<br>Sunday &ensp; &nbsp; &thinsp; 10:00AM - 7:00PM
+            </div>
+        </div>
+    </section>
+</body>
+</html>

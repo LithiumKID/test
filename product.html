@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="reserve.js"></script>
+    <script src="map.js"></script>
+</head>
+<body class="body">
+    <section class="navsec">
+        <nav>
+            <div class="navdiv">
+                <img class="logo" src="images/title.svg" alt="logo">
+            </div>
+            <div class="icondiv-left"> 
+                <img class="icon" src="images/Inventory Icon.svg" alt="inventory icon">
+                <img class="icon" src="images/Sell Icon.svg" alt="sell icon">
+                <img class="icon" src="images/Info Icon.svg" alt="info icon">
+            </div>
+            <div class="icondiv-right">
+                <img class="icon-right" src="images/Saved.svg" alt="saved icon">
+                <img class="icon-right" src="images/Share.svg" alt="share icon">
+            </div>
+        </nav>
+    </section>
+    <section class="bannersec">
+        <div class="bannerdiv">
+            <img class="banner" src="images/banner.png" alt="banner">
+            <div class="searchbardiv">
+                <form action="">
+                    <label for="first_name"></label>
+                    <input type="text" placeholder="Search by any keyword"> <br>
+                    <input type="image" class="submit" src="images/Search Icon.svg" alt="Submit">
+                </form>
+            </div>
+            <div class="categorysearch"> 
+                <div id="BodyType">
+                    <p class="categorysearchtext">Body Type</p>
+                    <img id="categorysearcharrow-1" src="images/Arrows.svg" alt="arrows">
+                </div>
+                <div  id="Make">
+                    <p class="categorysearchtext">Make</p>
+                    <img id="categorysearcharrow-2" src="images/Arrows.svg" alt="arrows">
+                </div>
+                <div  id="SearchButton">
+                    <p class="categorysearchtext-search">Search</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="productsec2">
+        <a href="home.html">
+            <img class="Back" src="images/Back.svg" alt="go back">
+        </a>
+        <div>
+            <img id="checkoutsaved" src="images/saved(checkout).svg" alt="saved">
+        </div>
+        <div class="popup" id="reserve-popup">
+            <img id="popimg" src="images/reserve.svg" alt="">
+            <img id="close-popup"src="/images/cross.svg" alt="" onclick="closePopup()">
+            <button class="confirm-popup" onclick="confirmPopup1()">Confirm</button>
+        </div>
+        <div id="recorded">
+            <img src="images/recorded.svg" alt="">
+            <button class="confirm-popup" onclick="confirmPopup2()">Confirm</button >
+        </div>
+        <div class="productinfo-column">
+            <div class="display">
+                <div class="Bigdisplay">
+                    <img id="bimg" src="/car images/acura.svg" alt="acura">
+                </div>
+                <div class="smalldisplay1">
+                    <img class="smd" src="/car images/a1.svg" alt="a1">
+                </div>
+                <div class="smalldisplay2">
+                    <img class="smd" src="/car images/a2.svg" alt="a2">
+                </div>
+                <div class="smalldisplay3">
+                    <img class="smd" src="/car images/a3.svg" alt="a3">
+                </div>
+            </div>
+            <div class="thumbnails">
+                <img id="thumbnails" src="images/thumbnails.svg" alt="thumbnails">
+            </div>
+            <div class="specifications">
+                <div class="specigrid">
+                    <div class="speci" class="ExteriorSpec">Exterior Specifications
+                        <img class="speciarrow" src="images/Arrows.svg" alt="">
+                    </div>
+                    <div class="speci" class="InteriorSpec">Interior Specifications
+                        <img class="speciarrow" src="images/Arrows.svg" alt="">
+                    </div>
+                    <div class="speci" class="SafetyFeat">Safety Features
+                        <img class="speciarrow" src="images/Arrows.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="disclaimer">
+                <h1 id="Discl">Disclaimer</h1>
+                <p id="disp">All advertised prices exclude government fees and taxes, any finance charges, any dealer document preparation 
+                    charge, and any emission testing charge. While we try to make sure that all prices posted here are accurate at 
+                    all times, we cannot be responsible for typographical and other errors that may appear on the site. We make every 
+                    effort to provide you with the most accurate, up-to-the-minute information; however, it is your responsibility to 
+                    verify with the Dealer that all details listed are accurate. The dealership is not responsible for typographical, 
+                    pricing, product information, advertising or shipping errors. Advertised prices and available quantities are 
+                    subject to change without notice. All rates and offers are dependent on bank approval, which varies based on 
+                    applicant's credit as well as the vehicle. We are not responsible for any errors please see our website for Real 
+                    time pricing, prices are subject to change without any notice. -For any questions or info please call Or text Ross 
+                    at (626)262-9494.</p>
+            </div>
+            <div class="checkout">
+                <div class="model">
+                    <img src="/images/model.svg" alt="">
+                </div>
+                <div class="price">
+                    <img src="/images/price.svg" alt="">
+                </div>
+                <div class="miles">
+                    <img src="/images/Miles.svg" alt="">
+                </div>
+                <button class="bu reserve" onclick="openPopup()">
+                    Reserve
+                </button>
+                <button class="bu preapproved">
+                    Get Pre-Approved
+                </button>
+                <button class="bu report">
+                    View CarFax Report
+                </button>
+            </div>
+            <div class="similar">
+                <img src="images/similar.svg" alt="">
+            </div>
+          </div>
+    </section>
+    <section class="bottomsec">
+        <div id="map"></div>
+            <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6tHcHrwuDO00zWnrQVHvTnqyfbizuAvQ&callback=initMap&v=weekly"
+                defer
+            ></script>
+        </div>
+        <img id="bottomlogo" src="images/title.svg" alt="bottomlogo">
+        <div class="bottomcolumn">
+            <div class="bottomcolumnleft">
+                <h5 class="bottomcolumn-heading">Follow Us</h5>
+                <img id="facebook" src="images/facebook.svg" alt="facebook">
+                <img id="twitter" src="images/twitter.svg" alt="twitter">
+            </div>
+            <div class="bottomcolumnright">
+                <h5 class="bottomcolumn-heading">Career</h5>
+                <div id="bottomcolumn-text">
+                    View Available Jobs<br><br>Privacy Policy<br><br>Disclaimer Notice
+                </div>
+            </div>
+        </div>
+        <div id="bottom-info">
+            <div id="address">
+                Venice Blvd<br>Los Angeles, CA 90034<br>(424) 444-6030</div>
+            </div>
+            <div id="timetable">
+                Monday &ensp; &nbsp; 10:00AM - 7:00PM<br>Tuesday &ensp; &nbsp; 10:00AM - 7:00PM<br>Wednesday &nbsp; 10:00AM - 7:00PM<br>Thursday &ensp; &thinsp; 10:00AM - 7:00PM<br>Friday &ensp; &nbsp; &thinsp; 10:00AM - 7:00PM<br>Saturday &ensp; &nbsp; 10:00AM - 7:00PM<br>Sunday &ensp; &nbsp; &thinsp; 10:00AM - 7:00PM
+            </div>
+        </div>
+    </section>
+</body>
+</html>
